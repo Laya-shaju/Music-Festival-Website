@@ -1,0 +1,30 @@
+body {
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?auto=format&fit=crop&w=1350&q=80') 
+              center/cover no-repeat;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}
+
+.festival-title {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+/* Artist Images */
+.artist-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Footer */
+footer {
+  margin-top: 30px;
+}

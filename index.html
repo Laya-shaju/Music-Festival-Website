@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Festival</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero d-flex align-items-center justify-content-center text-center">
+    <div>
+      <h1 class="festival-title">🎶 Summer Beats Festival 2025 🎶</h1>
+      <p>Experience the ultimate music festival</p>
+      <a href="#tickets" class="btn btn-primary btn-lg">Buy Tickets</a>
+    </div>
+  </section>
+
+  <!-- Lineup Grid -->
+  <section class="container py-5" id="lineup">
+    <h2 class="text-center mb-4">Artist Lineup</h2>
+    <div class="row">
+      <!-- Artist 1 -->
+      <div class="col-md-4 text-center">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVH51U9DHzFCwSbvpWKwPzccpf_u0_ABepBw&s" class="artist-img rounded-circle mb-2" alt="Artist 1">
+        <h5>DJ Electro</h5>
+        <p>8:00 PM - Main Stage</p>
+        <button class="btn btn-info" data-toggle="modal" data-target="#artist1Modal">More Info</button>
+      </div>
+      <!-- Artist 2 -->
+      <div class="col-md-4 text-center">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbjczi6bSSxPLqlAK-AS3mH8N5kxaI53LIrQ&s" class="artist-img rounded-circle mb-2" alt="Artist 2">
+        <h5>Rock Band</h5>
+        <p>6:00 PM - Rock Arena</p>
+        <button class="btn btn-info" data-toggle="modal" data-target="#artist2Modal">More Info</button>
+      </div>
+      <!-- Artist 3 -->
+      <div class="col-md-4 text-center">
+        <img src="https://cpng.pikpng.com/pngl/s/210-2102870_pop-music-png-transparent-pop-music-logo-clipart.png" class="artist-img rounded-circle mb-2" alt="Artist 3">
+        <h5>Pop Diva</h5>
+        <p>9:30 PM - Main Stage</p>
+        <button class="btn btn-info" data-toggle="modal" data-target="#artist3Modal">More Info</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schedule Page -->
+  <section class="container py-5" id="schedule">
+    <h2 class="text-center mb-4">Event Schedule</h2>
+    <table class="table table-bordered text-center">
+      <thead class="thead-dark">
+        <tr>
+          <th>Day</th>
+          <th>Stage</th>
+          <th>Artist</th>
+          <th>Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Day 1</td>
+          <td>Main Stage</td>
+          <td>DJ Electro</td>
+          <td>8:00 PM</td>
+        </tr>
+        <tr>
+          <td>Day 1</td>
+          <td>Rock Arena</td>
+          <td>Rock Band</td>
+          <td>6:00 PM</td>
+        </tr>
+        <tr>
+          <td>Day 1</td>
+          <td>Main Stage</td>
+          <td>Pop Diva</td>
+          <td>9:30 PM</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Tickets Section -->
+  <section class="container py-5 text-center" id="tickets">
+    <h2>Tickets</h2>
+    <p>Book your passes now and join us for the biggest music event of the year!</p>
+    <button class="btn btn-success btn-lg" data-toggle="modal" data-target="#ticketModal">Book Tickets</button>
+  </section>
+
+  <!-- Ticket Booking Modal -->
+  <div class="modal fade" id="ticketModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        
+        <div class="modal-header">
+          <h5 class="modal-title">Book Tickets</h5>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <div class="modal-body">
+          <form id="ticketForm">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" class="form-control" id="name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email ID</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="tickets">Number of Tickets</label>
+              <select class="form-control" id="tickets" required>
+                <option value="1">1 Ticket</option>
+                <option value="2">2 Tickets</option>
+                <option value="3">3 Tickets</option>
+                <option value="4">4 Tickets</option>
+              </select>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Confirm Booking</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Artist Bio Modals -->
+  <!-- Artist 1 Modal -->
+  <div class="modal fade" id="artist1Modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">DJ Electro</h5>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>DJ Electro is known for electrifying beats and EDM performances worldwide.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Artist 2 Modal -->
+  <div class="modal fade" id="artist2Modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Rock Band</h5>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>Rock Band has been rocking the stages since 2005 with chart-topping hits.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Artist 3 Modal -->
+  <div class="modal fade" id="artist3Modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Pop Diva</h5>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>Pop Diva is a global sensation with multiple platinum albums and energetic performances.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center py-4 bg-dark text-white">
+    <p>&copy; 2025 Summer Beats Festival | Designed with ❤️</p>
+  </footer>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
